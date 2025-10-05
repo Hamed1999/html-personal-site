@@ -1,0 +1,535 @@
+WEBVTT
+
+
+1
+00:00:00.500 --> 00:00:01.700
+- [Instructor] Next. we're going to look at
+
+2
+00:00:01.700 --> 00:00:04.000
+how to move items around in the grid.
+
+3
+00:00:04.000 --> 00:00:05.900
+They don't have to be displayed in the order they are
+
+4
+00:00:05.900 --> 00:00:08.500
+in the HTML and they don't always have to take up
+
+5
+00:00:08.500 --> 00:00:10.600
+only one cell in the grid.
+
+6
+00:00:10.600 --> 00:00:12.500
+In the code. you can see that I've already defined
+
+7
+00:00:12.500 --> 00:00:14.700
+three columns and two rows.
+
+8
+00:00:14.700 --> 00:00:17.200
+We can place grid items directly into grid cells.
+
+9
+00:00:17.200 --> 00:00:20.100
+but we need a way to specify the location we want.
+
+10
+00:00:20.100 --> 00:00:22.800
+This is done through the grid line numbers.
+
+11
+00:00:22.800 --> 00:00:25.500
+From the dev tools. you can see the line numbers.
+
+12
+00:00:25.500 --> 00:00:28.300
+The vertical lines. you'll see the line numbers at the top.
+
+13
+00:00:28.300 --> 00:00:30.100
+one. two. three. four.
+
+14
+00:00:30.100 --> 00:00:32.500
+And the horizontal lines numbered on the left
+
+15
+00:00:32.500 --> 00:00:35.100
+are one. two. three. four. five.
+
+16
+00:00:35.100 --> 00:00:37.600
+You can also see there's negative numbers on the bottom
+
+17
+00:00:37.600 --> 00:00:38.900
+and right side.
+
+18
+00:00:38.900 --> 00:00:41.300
+These can be used to place grid items as well
+
+19
+00:00:41.300 --> 00:00:42.800
+and they're handy if you want to count
+
+20
+00:00:42.800 --> 00:00:45.500
+from the last grid line. but you don't know its number
+
+21
+00:00:45.500 --> 00:00:47.300
+or the number may vary.
+
+22
+00:00:47.300 --> 00:00:50.000
+So down on the bottom. we see negative one. negative two.
+
+23
+00:00:50.000 --> 00:00:52.100
+negative three. and negative four.
+
+24
+00:00:52.100 --> 00:00:53.900
+Now. on the right. we have numbers starting with
+
+25
+00:00:53.900 --> 00:00:56.700
+negative one. but they don't start from the bottom.
+
+26
+00:00:56.700 --> 00:00:58.200
+There's a reason for that.
+
+27
+00:00:58.200 --> 00:01:01.000
+In the code. we only define two rows.
+
+28
+00:01:01.000 --> 00:01:04.600
+So we have two explicit rows and the rest are implicit rows.
+
+29
+00:01:04.600 --> 00:01:06.400
+The negative line numbers are only assigned
+
+30
+00:01:06.400 --> 00:01:08.700
+around the explicit rows.
+
+31
+00:01:08.700 --> 00:01:10.700
+We're going to be moving item four around.
+
+32
+00:01:10.700 --> 00:01:13.900
+so I already gave it a background color so it's easy to see.
+
+33
+00:01:13.900 --> 00:01:16.800
+The first properties we'll look at are grid-column-start.
+
+34
+00:01:16.800 --> 00:01:20.000
+which sets the horizontal starting location of a grid item.
+
+35
+00:01:20.000 --> 00:01:23.100
+grid-column-end. which sets the horizontal ending location
+
+36
+00:01:23.100 --> 00:01:24.400
+of a grid item.
+
+37
+00:01:24.400 --> 00:01:27.400
+So in the code. I'm going to go on line 15
+
+38
+00:01:27.400 --> 00:01:31.200
+and assign a style to item four
+
+39
+00:01:31.200 --> 00:01:35.800
+and it's gonna be grid-column-start: two.
+
+40
+00:01:35.800 --> 00:01:38.900
+The column is gonna start at line two.
+
+41
+00:01:38.900 --> 00:01:40.500
+And I go over and refresh.
+
+42
+00:01:40.500 --> 00:01:44.000
+So now. you can see item four is starting at line two.
+
+43
+00:01:44.000 --> 00:01:46.900
+How this works is it places the first three items.
+
+44
+00:01:46.900 --> 00:01:48.800
+then when it gets to number four.
+
+45
+00:01:48.800 --> 00:01:51.400
+it needs to be starting at the second line.
+
+46
+00:01:51.400 --> 00:01:55.000
+Skips ahead through the cells until it gets to an empty cell
+
+47
+00:01:55.000 --> 00:01:56.600
+which starts at line two
+
+48
+00:01:56.600 --> 00:01:59.600
+and that's where it places that grid item.
+
+49
+00:01:59.600 --> 00:02:02.000
+Then the spaces it skipped over stay empty
+
+50
+00:02:02.000 --> 00:02:04.800
+and the next item follows number four.
+
+51
+00:02:04.800 --> 00:02:06.700
+Now. you might want those spaces left empty
+
+52
+00:02:06.700 --> 00:02:07.900
+or you might not.
+
+53
+00:02:07.900 --> 00:02:10.500
+If you want the grid to go back and fill in the spaces
+
+54
+00:02:10.500 --> 00:02:13.100
+you skipped. you can use the property grid-auto-flow
+
+55
+00:02:13.100 --> 00:02:15.700
+and set it to dense.
+
+56
+00:02:15.700 --> 00:02:19.500
+For the container. I'm going to go on line 14
+
+57
+00:02:19.500 --> 00:02:24.300
+and do grid-auto-flow: dense.
+
+58
+00:02:24.300 --> 00:02:27.000
+Save and refresh.
+
+59
+00:02:27.000 --> 00:02:29.400
+And now. instead of there being an empty space.
+
+60
+00:02:29.400 --> 00:02:31.300
+it took the next item. item five.
+
+61
+00:02:31.300 --> 00:02:33.000
+and placed it in that space.
+
+62
+00:02:33.000 --> 00:02:36.500
+So now. we're going to use grid-column-end
+
+63
+00:02:36.500 --> 00:02:38.400
+to tell that grid item where to end.
+
+64
+00:02:38.400 --> 00:02:43.500
+So on line 18. I'm gonna do grid-column-end: four.
+
+65
+00:02:43.500 --> 00:02:45.600
+so it ends at line four.
+
+66
+00:02:45.600 --> 00:02:47.900
+Save and refresh.
+
+67
+00:02:47.900 --> 00:02:50.900
+So now. that grid item takes up two cells.
+
+68
+00:02:50.900 --> 00:02:53.700
+going from line two to line four.
+
+69
+00:02:53.700 --> 00:02:57.300
+You can also combine grid-column-start and grid-column-end
+
+70
+00:02:57.300 --> 00:03:00.700
+in one declaration of grid-column.
+
+71
+00:03:00.700 --> 00:03:03.300
+To do that. I'm gonna take out grid-column-start
+
+72
+00:03:03.300 --> 00:03:05.400
+and grid-column-end
+
+73
+00:03:05.400 --> 00:03:07.900
+and do grid-column
+
+74
+00:03:07.900 --> 00:03:09.300
+and then colon.
+
+75
+00:03:09.300 --> 00:03:11.200
+and we have the starting and ending values.
+
+76
+00:03:11.200 --> 00:03:15.900
+which we separated with a slash. so two / four.
+
+77
+00:03:15.900 --> 00:03:18.600
+So I'm gonna refresh and that's the same because
+
+78
+00:03:18.600 --> 00:03:20.900
+I replaced the same numbers that I took out
+
+79
+00:03:20.900 --> 00:03:23.400
+in the two separate declarations.
+
+80
+00:03:23.400 --> 00:03:26.900
+You can also count from the end. so I can do
+
+81
+00:03:26.900 --> 00:03:30.400
+grid-column-end: negative one.
+
+82
+00:03:30.400 --> 00:03:31.800
+Save
+
+83
+00:03:31.800 --> 00:03:33.200
+and refresh.
+
+84
+00:03:33.200 --> 00:03:35.800
+Now that grid item ends at negative one.
+
+85
+00:03:35.800 --> 00:03:37.800
+which is the last line.
+
+86
+00:03:37.800 --> 00:03:40.900
+You can also specify only a start or ending point.
+
+87
+00:03:40.900 --> 00:03:44.100
+but then say how many columns you want it to span.
+
+88
+00:03:44.100 --> 00:03:45.700
+So instead of grid-column-end.
+
+89
+00:03:45.700 --> 00:03:48.500
+I'm gonna replace that with grid-column.
+
+90
+00:03:48.500 --> 00:03:52.000
+colon. start at line two. slash.
+
+91
+00:03:52.000 --> 00:03:55.700
+and then span two to tell it to span two cells.
+
+92
+00:03:55.700 --> 00:03:56.700
+Save
+
+93
+00:03:56.700 --> 00:03:58.100
+and refresh.
+
+94
+00:03:58.100 --> 00:04:01.400
+Now. it starts at line two and spans two cells.
+
+95
+00:04:01.400 --> 00:04:03.600
+You can also do this with rows.
+
+96
+00:04:03.600 --> 00:04:04.400
+It works the same.
+
+97
+00:04:04.400 --> 00:04:07.500
+You have grid-row-start and grid-row-end
+
+98
+00:04:07.500 --> 00:04:09.800
+to set vertical starting location
+
+99
+00:04:09.800 --> 00:04:12.600
+and vertical ending location of a grid item.
+
+100
+00:04:12.600 --> 00:04:15.600
+Or they can be combined together in the same way in grid-row
+
+101
+00:04:15.600 --> 00:04:18.000
+with the starting and ending number.
+
+102
+00:04:18.000 --> 00:04:21.500
+Back on item four. I'm gonna add another line of CSS
+
+103
+00:04:21.500 --> 00:04:27.800
+and it's gonna be grid-row: three / span two.
+
+104
+00:04:27.800 --> 00:04:32.400
+That's gonna start at the third line and span two cells.
+
+105
+00:04:32.400 --> 00:04:34.300
+There we go. it's spanning two cells
+
+106
+00:04:34.300 --> 00:04:36.400
+going in both those directions.
+
+107
+00:04:36.400 --> 00:04:39.500
+If you only tell the browser the row or the column
+
+108
+00:04:39.500 --> 00:04:41.800
+where you want the grid item to be located.
+
+109
+00:04:41.800 --> 00:04:43.700
+it will find the next available open space
+
+110
+00:04:43.700 --> 00:04:45.600
+that meets those requirements.
+
+111
+00:04:45.600 --> 00:04:48.100
+But if you specify starting and ending locations
+
+112
+00:04:48.100 --> 00:04:51.800
+for both the row and column. it will go exactly there.
+
+113
+00:04:51.800 --> 00:04:53.300
+What's really interesting about this
+
+114
+00:04:53.300 --> 00:04:55.400
+is since you're telling it exactly where to place
+
+115
+00:04:55.400 --> 00:04:58.000
+your grid item. it will follow your instructions
+
+116
+00:04:58.000 --> 00:04:59.800
+even if they overlap.
+
+117
+00:04:59.800 --> 00:05:02.000
+So I'm gonna add one more.
+
+118
+00:05:02.000 --> 00:05:04.900
+which is item seven.
+
+119
+00:05:04.900 --> 00:05:11.700
+And I'm gonna give that a grid-row: one / span three
+
+120
+00:05:11.700 --> 00:05:14.400
+and then
+
+121
+00:05:14.400 --> 00:05:19.600
+grid-column: two / span two.
+
+122
+00:05:19.600 --> 00:05:21.300
+And save
+
+123
+00:05:21.300 --> 00:05:22.900
+and refresh.
+
+124
+00:05:22.900 --> 00:05:25.400
+It put both grid items exactly where you said
+
+125
+00:05:25.400 --> 00:05:28.600
+and the rest of the items fill in the empty space.
+
+126
+00:05:28.600 --> 00:05:30.500
+If you've done this and you wanna change
+
+127
+00:05:30.500 --> 00:05:31.900
+which one overlaps the other.
+
+128
+00:05:31.900 --> 00:05:35.700
+you can do that using Z index. which we looked at earlier.
+
+129
+00:05:35.700 --> 00:05:39.100
+And one final property you might use is grid-area.
+
+130
+00:05:39.100 --> 00:05:43.000
+which is shortcut for grid-row-start. grid-column-start.
+
+131
+00:05:43.000 --> 00:05:45.700
+grid-row-end. and grid-column-end.
+
+132
+00:05:45.700 --> 00:05:48.300
+To use that one. you just enter the four numbers
+
+133
+00:05:48.300 --> 00:05:51.300
+in that order separated by slashes.
+

@@ -1,0 +1,445 @@
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sing Up | Hamed Salmanizadegan, Game & Front-End Developer</title>
+        <link rel="icon" href="../img/Hamed_Official.jpg" type="image/png">
+        <link rel="stylesheet" href="../styles/account-style.css">
+      </head>
+      <body>
+        <header><!-- Global Header -->
+        <nav  id="top">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../blog.html">Blog</a></li>
+              <li><a href="create.html">Sign Up</a></li>
+              <li><a href="../contact.html" target="_blank">Contact</a></li>
+            </ul>
+          </nav>
+
+          <hgroup>
+            <h1>Hamed Salmanizadegn</h1>
+            <p><em>No</em> retreat, <em>no</em> surrender!</p>
+          </hgroup>
+          
+          <pre class="ascii-art" aria-label="A cute cat face">
+ /\_/\
+ ( o.o )
+ > ^ <
+          </pre>
+        </header>
+
+        <main>
+          <h2>Welcom to Hamed's Fan Community</h2>
+          <form action="submit.html" method="GET">
+            <fieldset>
+              <legend>Create an Account</legend>
+              <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required
+                        placeholder="email@example.com" pattern="[a-zA-Z0-9]+@[a-zA-Z]+\.[a-z]+" 
+                        title="Please enter a valid email address. (e.g email@example.com)" minlength="6">
+              </div>
+              <!-- <br><br> -->
+              <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+              </div>
+              <!-- <br><br> -->
+              <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required
+                       title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="8 characters contain uppercase, lowercase, and number" minlength="">
+              </div>
+              <!-- <br><br> -->
+               <div>
+                <input type="checkbox" id="keep-in-touch" checked
+                       name="keep-in-touch" value="yes">
+                <label for="keep-in-touch">I want to keep in touch with Hamed.</label>
+               </div>
+              <!-- <br><br> -->
+              <div>
+                <button type="submit">Create Account</button> 
+                <!-- <img src="botton.png" alt="account icon"> -->
+              </div>
+            </fieldset>
+          </form>
+        </main>
+
+        <footer> <!-- Global Footer -->
+          <p style="font-weight: bold;"><small>© 2025 My Personal Website</small></p>
+        </footer>
+      </body>
+      </html>
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 0.8s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo i {
+            font-size: 42px;
+            color: #4285f4;
+            background: #fff;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(66, 133, 244, 0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #444;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .input-with-icon {
+            position: relative;
+        }
+        
+        .input-with-icon i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 15px 15px 15px 45px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #f9f9f9;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #4285f4;
+            box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.2);
+            background: #fff;
+        }
+        
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777;
+            cursor: pointer;
+        }
+        
+        .requirements {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+            padding-left: 10px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .checkbox-group input {
+            margin-right: 10px;
+            accent-color: #4285f4;
+        }
+        
+        .checkbox-group label {
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+        
+        .terms {
+            color: #4285f4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .terms:hover {
+            text-decoration: underline;
+        }
+        
+        button {
+            width: 100%;
+            padding: 16px;
+            background: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(66, 133, 244, 0.4);
+        }
+        
+        button:hover {
+            background: #3367d6;
+            transform: translateY(-2px);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .divider {
+            text-align: center;
+            margin: 30px 0;
+            position: relative;
+            color: #777;
+        }
+        
+        .divider::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 42%;
+            height: 1px;
+            background: #ddd;
+        }
+        
+        .divider::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 42%;
+            height: 1px;
+            background: #ddd;
+        }
+        
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .facebook {
+            background: #3b5998;
+        }
+        
+        .google {
+            background: #db4437;
+        }
+        
+        .twitter {
+            background: #1da1f2;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .login-link {
+            text-align: center;
+            color: #666;
+            font-size: 15px;
+        }
+        
+        .login-link a {
+            color: #4285f4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 25px;
+            }
+            
+            input[type="text"],
+            input[type="email"],
+            input[type="password"] {
+                padding: 12px 12px 12px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <i class="fas fa-user-plus"></i>
+        </div>
+        
+        <h1>Create Your Account</h1>
+        <p class="subtitle">Join our community and start your journey today</p>
+        
+        <form id="accountForm">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Create a strong password" required>
+                    <span class="password-toggle" id="passwordToggle">
+                        <i class="fas fa-eye"></i>
+                    </span>
+                </div>
+                <p class="requirements">Must be at least 8 characters with uppercase, lowercase, and a number</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+            </div>
+            
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#" class="terms">Terms of Service</a> and <a href="#" class="terms">Privacy Policy</a></label>
+            </div>
+            
+            <button type="submit">Create Account</button>
+        </form>
+        
+        <div class="divider">or sign up with</div>
+        
+        <div class="social-login">
+            <div class="social-btn facebook">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="social-btn google">
+                <i class="fab fa-google"></i>
+            </div>
+            <div class="social-btn twitter">
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+        
+        <p class="login-link">Already have an account? <a href="#">Log in</a></p>
+    </div>
+
+    <script>
+        // Toggle password visibility
+        const passwordToggle = document.getElementById('passwordToggle');
+        const passwordInput = document.getElementById('password');
+        
+        passwordToggle.addEventListener('click', function() {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            
+            // Toggle eye icon
+            if (type === 'text') {
+                passwordToggle.innerHTML = '<i class="fas fa-eye-slash"></i>';
+            } else {
+                passwordToggle.innerHTML = '<i class="fas fa-eye"></i>';
+            }
+        });
+        
+        // Form submission
+        document.getElementById('accountForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your form validation and submission logic here
+            alert('Account creation functionality would be implemented here!');
+        });
+    </script>
+</body>
+</html>  
+-->

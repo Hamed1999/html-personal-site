@@ -1,0 +1,126 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Contact | Hamed Salmanizadegan, Game & Front-End Developer</title>
+      <link rel="icon" href="img/Hamed_Official.jpg" type="image/png">
+      <link rel="stylesheet" href="styles/contact-style.css">
+    </head>
+    <style>
+      body{
+        margin: 0;
+        text-align: center;
+      }
+      .responsive{
+        width: 85%;
+        height: auto;
+      }
+    </style>
+    <body>
+      <header><!-- Global Header -->
+          <nav  id="top">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="account/create.html">Sign Up</a></li>
+              <li><a href="contact.html" target="_blank">Contact</a></li>
+            </ul>
+          </nav>
+
+        <hgroup>
+          <h1>Hamed Salmanizadegn</h1>
+          <p><em>No</em> retreat, <em>no</em> surrender!</p>
+        </hgroup>
+        
+          <pre class="ascii-art" aria-label="A cute cat face">
+ /\_/\
+ ( o.o )
+ > ^ <
+          </pre>
+      </header>
+
+
+       <main>
+        <section>
+          <h2>My Social Medias</h2>
+          <ul>
+            <li>Email: <a href="mailto:hsalmanizadegan@gmail.com">hsalmanizadegan@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/hamed-salmanizadegan1999/" target="_blank">linkedin.com/in/hamed-salmanizadegan1999</a></li>
+            <li>GitHub: <a href="https://github.com/Hamed1999/" target="_blank">github.com/hamed1999</a></li>
+            <li>Instagram: <a href="https://www.instagram.com/hamed_salmanizadegan" target="_blank">@hamed_salmanizadegan</a></li>
+            <li>Telegram: <a href="https://t.me/De_mah78" target="_blank">t.me/De_mah78</a></li>
+        </section>
+
+        <section>          
+          <form action="contact.html" method="GET">
+            <filedset>
+              <legend><h2>Contact Me</h2></legend>
+              <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required
+                       pattern="[a-z0-9A-Z]+@[a-z]+\.[a-z]+"
+                       title="Email should be like email@example.com"
+                       minlength="5">
+              </div>
+              <div>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message"
+                          rows="8" cols="70" required
+                          minlength="4" maxlength="1000"
+                          dir="auto"></textarea>
+              </div>
+              <div>
+                <button type="submit"> Send Message </button>
+                <button type="reset"> Reset </button>
+              </div>
+            </filedset>
+          </form>
+        </section>
+        
+          
+        <video src="videos/VideoTutorial.mp4" controls loop muted
+               poster="img/video-poster.png"
+               width="800" height="450"> <!--autoplay-->
+          <track default src="videos/vtt/VideoTutorial.vtt"
+                 kind="captions" srclang="en">
+          <p>
+            Your browser doesn't support the HTML video. Here is a <a href="videos/VideoTutorial.mp4" target="_blank">link to the video</a> intead.    
+          </p>
+        </video>
+
+        <!-- <img   srcset="400x250.jpg, 800x500.jpg 2x, 1600x1000.jpg 3x"
+                 src="400x250.jpg"
+                 alt="A saved image"
+                 width="400" height="250"> -->
+
+        <img   srcset="img/400x250.jpg 400w, img/800x500.jpg 600w, img/1600x1000.jpg 1600w"
+               sizes="(max-width: 600px) 400px,
+                      (max-width: 1000px) 600px,
+                      1600px"
+               src="img/400x250.jpg"
+               alt="A sea image"
+               class="responsive">
+
+        <!-- <picture>
+          <source media="(max-width: 600px)"
+                  srcset="img\sea_corrupt_400x250.png,
+                          img\sea_corrupt_800x500.png 2x">
+          <source media="(min-width: 601px)"
+                  srcset="img\sea_800x500.png,
+                          img\1600x1000.jpg 2x">        
+          <img src="img/sea_800x500.png"
+               alt="A saved image"
+               class="responsive">
+        </picture> -->
+       </main>
+
+       <footer> <!-- Global Footer -->
+        <p style="font-weight: bold;"><small>© 2025 My Personal Website</small></p>
+      </footer>
+    </body>
+    </html>
